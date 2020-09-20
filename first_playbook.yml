@@ -1,0 +1,11 @@
+---
+- name: My First Playbook
+  hosts:
+    - server01
+    - server02
+  tasks:
+    - action: ping
+    - name: Check CRON status
+      service:
+        name: crond
+        state: started
